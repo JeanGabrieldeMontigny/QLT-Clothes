@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/QLT-Clothes/static/css/main.16142b28.css",
-    "main.js": "/QLT-Clothes/static/js/main.cb7b6950.js",
+    "main.css": "/QLT-Clothes/static/css/main.fbc5709f.css",
+    "main.js": "/QLT-Clothes/static/js/main.b0867c55.js",
     "static/media/contact2.avif": "/QLT-Clothes/static/media/contact2.e3a50c4f304b53f4fabf.avif",
     "static/media/contact1.avif": "/QLT-Clothes/static/media/contact1.7352be540665e53e88bb.avif",
     "static/media/contact3.avif": "/QLT-Clothes/static/media/contact3.8fbe0c6c7a182cd97391.avif",
@@ -39,11 +39,11 @@
     "static/media/wBottoms1.avif": "/QLT-Clothes/static/media/wBottoms1.052cf6ea63e02592e369.avif",
     "static/media/cShirt2.avif": "/QLT-Clothes/static/media/cShirt2.3c120eff557cc9c1dd9f.avif",
     "index.html": "/QLT-Clothes/index.html",
-    "main.16142b28.css.map": "/QLT-Clothes/static/css/main.16142b28.css.map",
-    "main.cb7b6950.js.map": "/QLT-Clothes/static/js/main.cb7b6950.js.map"
+    "main.fbc5709f.css.map": "/QLT-Clothes/static/css/main.fbc5709f.css.map",
+    "main.b0867c55.js.map": "/QLT-Clothes/static/js/main.b0867c55.js.map"
   },
   "entrypoints": [
-    "static/css/main.16142b28.css",
-    "static/js/main.cb7b6950.js"
+    "static/css/main.fbc5709f.css",
+    "static/js/main.b0867c55.js"
   ]
 }
