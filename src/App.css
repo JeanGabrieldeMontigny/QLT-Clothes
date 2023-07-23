@@ -1,3 +1,25 @@
+:root {
+  --primary-color: #ffffff;     /* White */
+  --secondary-color: #f0f0f0;   /* Light Grey */
+  --action-color: #ff0000;      /* Red */
+}
+
+body {
+  background-color: var(--primary-color);
+  color: #000000; /* Black */
+}
+
+a {
+  color: var(--action-color);
+}
+
+/* Additional styling using the secondary color */
+.some-element {
+  background-color: var(--secondary-color);
+  /* ... other styles ... */
+}
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +57,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Sizes buttons */
+.size-btn {
+  margin: 5px;
+  background-color: #fff; /* Set default background color for size buttons */
+  color: #000; /* Set default text color for size buttons */
+  border: 1px solid #007bff; /* Add border to size buttons */
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.size-btn.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.size-btn.unavailable {
+  background-color: #d3d3d3;
+  color: #000;
+  cursor: not-allowed;
+}
+
+
+/* NewArrivalSection.css */
+
+.red-button {
+  background-color: #ff0000; /* Red */
+  border: red;
+}
+
+.red-button:hover{
+  background-color: black;
 }

@@ -1,0 +1,44 @@
+.size-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .size-btn {
+    padding: 6px 12px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .size-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .size-btn.selected {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .size-btn.unavailable {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* ClothingCard.css */
+
+/* Use the defined CSS variables for colors */
+.Card {
+  background-color: var(--primary-color);
+  color: #000; /* Set text color to black for better readability */
+}
+
+/* Style for the "Add to Cart" button */
+.Button-primary {
+  background-color: var(--action-color);
+  color: var(--primary-color);
+  border-color: var(--action-color);
+}

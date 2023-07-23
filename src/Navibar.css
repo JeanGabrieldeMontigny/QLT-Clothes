@@ -1,0 +1,23 @@
+/* Navibar.css */
+
+/* Custom class to set the background color behind "QLT Clothes" to red */
+.brand-text {
+    font-family: 'Montserrat', sans-serif;
+    background-color: red;
+    color: white;
+    padding: 6px 6px; /* Add padding to create space around the text */
+    margin-left: 12px;
+    font-size: larger;
+    
+  }
+
+  .brand-text:hover{
+    background-color: black;
+  }
+  
+  .nav-link{
+    color: black;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-size: larger;
+    font-weight: 500;
+  }
