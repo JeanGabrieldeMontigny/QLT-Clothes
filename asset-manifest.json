@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/QLT-Clothes/static/css/main.fbc5709f.css",
-    "main.js": "/QLT-Clothes/static/js/main.b0867c55.js",
+    "main.css": "/QLT-Clothes/static/css/main.1c554212.css",
+    "main.js": "/QLT-Clothes/static/js/main.1a04976f.js",
     "static/media/contact2.avif": "/QLT-Clothes/static/media/contact2.e3a50c4f304b53f4fabf.avif",
     "static/media/contact1.avif": "/QLT-Clothes/static/media/contact1.7352be540665e53e88bb.avif",
+    "static/media/homeCarousel1.avif": "/QLT-Clothes/static/media/homeCarousel1.144acdc3c5a7a359efdf.avif",
     "static/media/contact3.avif": "/QLT-Clothes/static/media/contact3.8fbe0c6c7a182cd97391.avif",
-    "static/media/homeCarousel1.avif": "/QLT-Clothes/static/media/homeCarousel1.1bcee4859c1a884cbc8a.avif",
     "static/media/homeCarousel3.avif": "/QLT-Clothes/static/media/homeCarousel3.54e7a3a4d1e66a3238d1.avif",
     "static/media/cT2.jpg": "/QLT-Clothes/static/media/cT2.103938079859975ea80b.jpg",
     "static/media/menTop2.jpg": "/QLT-Clothes/static/media/menTop2.82fd9f30fbd583eb0eae.jpg",
@@ -39,11 +39,11 @@
     "static/media/wBottoms1.avif": "/QLT-Clothes/static/media/wBottoms1.052cf6ea63e02592e369.avif",
     "static/media/cShirt2.avif": "/QLT-Clothes/static/media/cShirt2.3c120eff557cc9c1dd9f.avif",
     "index.html": "/QLT-Clothes/index.html",
-    "main.fbc5709f.css.map": "/QLT-Clothes/static/css/main.fbc5709f.css.map",
-    "main.b0867c55.js.map": "/QLT-Clothes/static/js/main.b0867c55.js.map"
+    "main.1c554212.css.map": "/QLT-Clothes/static/css/main.1c554212.css.map",
+    "main.1a04976f.js.map": "/QLT-Clothes/static/js/main.1a04976f.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbc5709f.css",
-    "static/js/main.b0867c55.js"
+    "static/css/main.1c554212.css",
+    "static/js/main.1a04976f.js"
   ]
 }
