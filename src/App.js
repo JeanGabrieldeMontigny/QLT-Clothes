@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
-import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import Navibar from "./components/Navibar";
 import ClothingCard from "./ClothingCard";
 import ShoppingCart from "./ShoppingCart";
@@ -79,7 +85,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <Router>
       <div>
         <div className="App">
           <Navibar
@@ -91,28 +97,27 @@ function App() {
           />
 
           <Routes>
-            {/* Add the rest of your routes here */}
+            {/* Default route to Home.js */}
             <Route path="/" element={<Home />} />
+
+            {/* Add the rest of your routes here */}
             <Route
               path="/men"
-              element={<ProductsMen addToCart={addToCart} />} // Pass the addToCart function as a prop
+              element={<ProductsMen addToCart={addToCart} />}
             />
             <Route
               path="/women"
-              element={<ProductsWomen addToCart={addToCart} />} // Pass the addToCart function as a prop
+              element={<ProductsWomen addToCart={addToCart} />}
             />
             <Route
               path="/collections"
-              element={<Collections addToCart={addToCart} />} // Pass the addToCart function as a prop
+              element={<Collections addToCart={addToCart} />}
             />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
 
             {/* Add other routes as needed */}
           </Routes>
-
-          {/* <Support />
-          <Contact /> */}
 
           <ShoppingCart
             cartItems={cartItems}
@@ -124,7 +129,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

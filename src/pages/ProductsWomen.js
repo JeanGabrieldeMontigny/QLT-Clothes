@@ -13,6 +13,8 @@ import wJackets1 from "../img/wJackets1.avif";
 import wJackets2 from "../img/wJackets2.avif";
 import wJackets3 from "../img/wJackets3.avif";
 
+import "../Products.css";
+
 const ProductsWomen = ({ addToCart }) => {
   // Your existing product data for women
   const productsData = [
@@ -69,7 +71,7 @@ const ProductsWomen = ({ addToCart }) => {
         {
           id: uuidv4(), // Generate unique id for product 2
           name: "Pleated Wide Pants",
-          description: "Elegant pleated wide pants for a sophisticated style.",
+          description: "Elegant pleated wide pants for a refined style.",
           imageSrc: wBottoms3,
           price: 38,
           sizes: ["S", "M", "L"], // Available sizes for Women's Bottom 3
@@ -246,23 +248,40 @@ const ProductsWomen = ({ addToCart }) => {
         </Col>
         <Col md={9}>
           {/* Your filtered product rendering */}
-          <Row>
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product, productIndex) => (
-                <Col key={productIndex} md={4}>
-                  {/* Use the modified ClothingCard component here */}
-                  <ClothingCard
-                    product={product}
-                    addToCart={addToCart}
-                    quantity={productQuantities[product.id] || 1}
-                    handleQuantityChange={handleQuantityChange}
-                  />
-                </Col>
-              ))
-            ) : (
-              <p>No products match the selected filters.</p>
-            )}
-          </Row>
+          {/* Add the category name above the product cards */}
+          {productsData.map((categoryData) => (
+            <div key={categoryData.category}>
+              <h3>{categoryData.category}</h3>
+              <Row>
+                {categoryData.products
+                  .filter(
+                    (product) =>
+                      (selectedCategory === "All" ||
+                        categoryData.category === selectedCategory) &&
+                      (selectedSize === "All" ||
+                        product.sizes.includes(selectedSize)) &&
+                      (selectedPriceRange === "All" ||
+                        (selectedPriceRange === "Under $30" &&
+                          product.price < 30) ||
+                        (selectedPriceRange === "$30 - $50" &&
+                          product.price >= 30 &&
+                          product.price <= 50) ||
+                        (selectedPriceRange === "Over $50" &&
+                          product.price > 50))
+                  )
+                  .map((product) => (
+                    <Col key={product.id} md={4}>
+                      <ClothingCard
+                        product={product}
+                        addToCart={addToCart}
+                        quantity={productQuantities[product.id] || 1}
+                        handleQuantityChange={handleQuantityChange}
+                      />
+                    </Col>
+                  ))}
+              </Row>
+            </div>
+          ))}
         </Col>
       </Row>
     </div>

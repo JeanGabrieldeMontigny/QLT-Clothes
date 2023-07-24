@@ -1,0 +1,5 @@
+
+
+body > div.fade.modal.show > div > div > div.modal-footer{
+    justify-content: center;
+}

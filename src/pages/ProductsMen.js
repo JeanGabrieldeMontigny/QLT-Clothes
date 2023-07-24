@@ -13,6 +13,8 @@ import menJackets1 from "../img/menJackets1.jpg";
 import menJackets2 from "../img/menJackets2.jpg";
 import menJackets3 from "../img/menJackets3.jpg";
 
+import "../Products.css";
+
 const ProductsMen = ({ addToCart }) => {
   // Your existing product data
   const productsData = [
@@ -22,7 +24,7 @@ const ProductsMen = ({ addToCart }) => {
         {
           id: uuidv4(),
           name: "T-Shirt",
-          description: "A comfortable and casual t-shirt for everyday wear.",
+          description: "A comfortable t-shirt for everyday wear.",
           imageSrc: menTop1,
           price: 15,
           sizes: ["S", "M", "L"], // Available sizes for Product 1
@@ -82,7 +84,7 @@ const ProductsMen = ({ addToCart }) => {
         {
           id: uuidv4(), // Generate unique id for product 3
           name: "Bomber Jacket",
-          description: "A trendy bomber jacket for a cool and stylish look.",
+          description: "A trendy bomber jacket for a stylish look.",
           imageSrc: menJackets1,
           price: 95,
           sizes: ["S", "M", "L"], // Available sizes for Product 3
@@ -149,27 +151,24 @@ const ProductsMen = ({ addToCart }) => {
           categoryData.category === selectedCategory) &&
         (selectedSize === "All" || product.sizes.includes(selectedSize)) &&
         (selectedPriceRange === "All" ||
-          (selectedPriceRange === "Under $30" && product.price < 30) ||
-          (selectedPriceRange === "$30 - $50" &&
-            product.price >= 30 &&
-            product.price <= 50) ||
-          (selectedPriceRange === "Over $50" && product.price > 50))
+          (selectedPriceRange === "Under $40" && product.price < 40) ||
+          (selectedPriceRange === "$40 - $60" &&
+            product.price >= 40 &&
+            product.price <= 60) ||
+          (selectedPriceRange === "Over $60" && product.price > 60))
     )
   );
 
   return (
-    <div style={{ padding: "1% 5%" }}>
+    <div>
       <Row>
-        <Col
-          md={3}
-          style={{ width: "10%", backgroundColor: "var(--secondary-color)" }}
-        >
+        <Col md={3}>
           {/* Filter options */}
           <Form>
             <Form.Group>
               <Form.Label>
                 {" "}
-                <h5>Category:</h5>
+                <h6>Category:</h6>
               </Form.Label>
               <Form.Check
                 type="radio"
@@ -194,7 +193,7 @@ const ProductsMen = ({ addToCart }) => {
             <Form.Group>
               <Form.Label>
                 {" "}
-                <h5>Size:</h5>
+                <h6>Size:</h6>
               </Form.Label>
               <Form.Check
                 type="radio"
@@ -219,7 +218,7 @@ const ProductsMen = ({ addToCart }) => {
             <Form.Group>
               <Form.Label>
                 {" "}
-                <h5>Price Range:</h5>{" "}
+                <h6>Price Range:</h6>
               </Form.Label>
               <Form.Check
                 type="radio"
@@ -257,37 +256,41 @@ const ProductsMen = ({ addToCart }) => {
           </Form>
         </Col>
         <Col md={9}>
-          <Row>
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product, productIndex) => (
-                <Col key={productIndex} md={4}>
-                  {/* Use the modified ClothingCard component here */}
-                  <Card style={{ backgroundColor: "var(--primary-color)" }}>
-                    <Card.Img variant="top" src={product.imageSrc} />
-                    <Card.Body>
-                      <Card.Title>{product.name}</Card.Title>
-                      <Card.Text>{product.description}</Card.Text>
-                      <Card.Text>Price: ${product.price}</Card.Text>
-                      <Button
-                        style={{
-                          backgroundColor: "var(--action-color)",
-                          color: "var(--primary-color)",
-                          borderColor: "var(--action-color)",
-                        }}
-                        onClick={() => addToCart(product)}
-                      >
-                        Add to Cart
-                      </Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))
-            ) : (
-              <p style={{ color: "var(--primary-color)" }}>
-                No products match the selected filters.
-              </p>
-            )}
-          </Row>
+          {/* Your filtered product rendering */}
+          {/* Add the category name above the product cards */}
+          {productsData.map((categoryData) => (
+            <div key={categoryData.category}>
+              <h3>{categoryData.category}</h3>
+              <Row>
+                {categoryData.products
+                  .filter(
+                    (product) =>
+                      (selectedCategory === "All" ||
+                        categoryData.category === selectedCategory) &&
+                      (selectedSize === "All" ||
+                        product.sizes.includes(selectedSize)) &&
+                      (selectedPriceRange === "All" ||
+                        (selectedPriceRange === "Under $30" &&
+                          product.price < 30) ||
+                        (selectedPriceRange === "$30 - $50" &&
+                          product.price >= 30 &&
+                          product.price <= 50) ||
+                        (selectedPriceRange === "Over $50" &&
+                          product.price > 50))
+                  )
+                  .map((product) => (
+                    <Col key={product.id} md={4}>
+                      <ClothingCard
+                        product={product}
+                        addToCart={addToCart}
+                        quantity={productQuantities[product.id] || 1}
+                        handleQuantityChange={handleQuantityChange}
+                      />
+                    </Col>
+                  ))}
+              </Row>
+            </div>
+          ))}
         </Col>
       </Row>
     </div>

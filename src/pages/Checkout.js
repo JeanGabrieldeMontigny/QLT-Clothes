@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
+import "../Checkout.css";
 
 const Checkout = ({ onPurchaseComplete }) => {
   const [formData, setFormData] = useState({
@@ -50,6 +51,7 @@ const Checkout = ({ onPurchaseComplete }) => {
               <Form.Control
                 type="text"
                 name="firstName"
+                placeholder="Enter your first name"
                 value={formData.firstName}
                 onChange={handleChange}
                 required
@@ -60,6 +62,7 @@ const Checkout = ({ onPurchaseComplete }) => {
               <Form.Control
                 type="text"
                 name="lastName"
+                placeholder="Enter your last name"
                 value={formData.lastName}
                 onChange={handleChange}
                 required
@@ -70,6 +73,7 @@ const Checkout = ({ onPurchaseComplete }) => {
               <Form.Control
                 type="text"
                 name="address"
+                placeholder="Enter your address"
                 value={formData.address}
                 onChange={handleChange}
                 required
@@ -80,6 +84,7 @@ const Checkout = ({ onPurchaseComplete }) => {
               <Form.Control
                 type="text"
                 name="creditCardNumber"
+                placeholder="Enter your credit card number"
                 value={formData.creditCardNumber}
                 onChange={handleChange}
                 required
@@ -88,10 +93,20 @@ const Checkout = ({ onPurchaseComplete }) => {
             <Form.Group controlId="ccv">
               <Form.Label>CCV</Form.Label>
               <Form.Control
-                type="text"
+                type="number"
                 name="ccv"
+                placeholder="Enter your CCV (3 digits)"
                 value={formData.ccv}
-                onChange={handleChange}
+                onChange={(e) => {
+                  // Restrict input to 3 digits only
+                  const ccvValue = e.target.value;
+                  if (/^\d{0,3}$/.test(ccvValue)) {
+                    setFormData((prevData) => ({
+                      ...prevData,
+                      ccv: ccvValue,
+                    }));
+                  }
+                }}
                 required
               />
             </Form.Group>

@@ -1,0 +1,35 @@
+.col-md-3{
+    width: 15%;
+    padding-left: 3%;
+    background-color:#f8f9fa ;
+    padding-top: 60px;
+
+}
+
+.form-check{
+    text-align: left;
+}
+
+.btn {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+
+.size-btn.selected{
+    background-color: black;
+    border-color: black;
+}
+
+h3 {
+    padding: 20px;
+}
+
+.btn-primary{
+    margin: 10px;
+}
+
+.col-md-9{
+    margin-left: 4%;
+}
+

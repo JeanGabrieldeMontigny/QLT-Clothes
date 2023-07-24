@@ -21,3 +21,7 @@
     font-size: larger;
     font-weight: 500;
   }
+
+  .navbar {
+    border-bottom: 1px solid black;
+  }

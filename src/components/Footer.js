@@ -1,7 +1,17 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+
+const links = [
+  { label: "Home", path: "/" },
+  { label: "Men", path: "/men" },
+  { label: "Women", path: "/women" },
+  { label: "Collections", path: "/collections" },
+  { label: "Contact Us", path: "/contact" },
+  { label: "Support", path: "/support" },
+  { label: "Cart", path: "/cart" },
+];
 
 const Footer = () => {
   return (
@@ -18,13 +28,15 @@ const Footer = () => {
         </Navbar>
 
         <Nav className="nav">
-          <Nav.Link href="#" className="nav-link text-muted">Home</Nav.Link>
-          <Nav.Link href="#" className="nav-link text-muted">Men</Nav.Link>
-          <Nav.Link href="#" className="nav-link text-muted">Women</Nav.Link>
-          <Nav.Link href="#" className="nav-link text-muted">Collections</Nav.Link>
-          <Nav.Link href="#" className="nav-link text-muted">Contact Us</Nav.Link>
-          <Nav.Link href="#" className="nav-link text-muted">Support</Nav.Link>
-          <Nav.Link href="#" className="nav-link text-muted">Cart</Nav.Link>
+          {links.map((link, index) => (
+            <Nav.Link
+              key={index}
+              href={link.path}
+              className="nav-link text-muted"
+            >
+              {link.label}
+            </Nav.Link>
+          ))}
         </Nav>
       </Container>
     </footer>

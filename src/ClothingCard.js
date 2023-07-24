@@ -20,7 +20,7 @@ const ClothingCard = ({ product, addToCart }) => {
   };
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "23rem" }}>
       <Card.Img variant="top" src={product.imageSrc} alt={product.name} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>

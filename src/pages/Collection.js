@@ -14,6 +14,8 @@ import cT3 from "../img/cT3.jpg";
 import cT4 from "../img/cT4.jpg";
 import cT5 from "../img/cT5.jpg";
 
+import "../Products.css";
+
 const Collections = ({ addToCart }) => {
   const productsData = [
     {

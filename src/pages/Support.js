@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
+import "../FAQ.css";
 
 const Support = () => {
   const [language, setLanguage] = useState("english");
@@ -154,7 +155,7 @@ const Support = () => {
   };
 
   return (
-    <div>
+    <div className="accordion">
       <div
         style={{
           display: "flex",
