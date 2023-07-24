@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/QLT-Clothes/static/css/main.b14c38ce.css",
-    "main.js": "/QLT-Clothes/static/js/main.35962296.js",
+    "main.js": "/QLT-Clothes/static/js/main.24c87dbc.js",
     "static/media/contact2.avif": "/QLT-Clothes/static/media/contact2.e3a50c4f304b53f4fabf.avif",
     "static/media/contact1.avif": "/QLT-Clothes/static/media/contact1.7352be540665e53e88bb.avif",
     "static/media/homeCarousel1.avif": "/QLT-Clothes/static/media/homeCarousel1.144acdc3c5a7a359efdf.avif",
@@ -40,10 +40,10 @@
     "static/media/cShirt2.avif": "/QLT-Clothes/static/media/cShirt2.3c120eff557cc9c1dd9f.avif",
     "index.html": "/QLT-Clothes/index.html",
     "main.b14c38ce.css.map": "/QLT-Clothes/static/css/main.b14c38ce.css.map",
-    "main.35962296.js.map": "/QLT-Clothes/static/js/main.35962296.js.map"
+    "main.24c87dbc.js.map": "/QLT-Clothes/static/js/main.24c87dbc.js.map"
   },
   "entrypoints": [
     "static/css/main.b14c38ce.css",
-    "static/js/main.35962296.js"
+    "static/js/main.24c87dbc.js"
   ]
 }
